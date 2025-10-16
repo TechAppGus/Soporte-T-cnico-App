@@ -27,10 +27,14 @@ body {
 
 /* Mobile-first: Estilos base para móviles */
 .header {
-    background: #007bff;
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    background: var(--accent);
+    color: var(--text);
+}
+.nav-menu ul li a {
+    color: var(--text);
+}
+.hamburger {
+    color: var(--text);
 }
 
 .header-container {
@@ -73,18 +77,19 @@ body {
 }
 
 .hero {
-    background: #f4f4f4;
-    padding: 2rem;
-    text-align: center;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
 }
-
 .cta-button {
-    display: inline-block;
-    background: #007bff;
-    color: white;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
     padding: 10px 20px;
-    text-decoration: none;
-    margin-top: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .services, .how-it-works, .prices, .testimonials, .footer {
@@ -99,10 +104,11 @@ body {
 }
 
 .service-card, .price-card, .testimonial-card {
-    background: white;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 5px;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
 }
 
 .footer form {
@@ -112,13 +118,15 @@ body {
     margin: 0 auto;
 }
 
-.footer form label {
-    margin-top: 1rem;
+.footer {
+    text-align: center;
+    background: var(--surface);
+    color: var(--text);
 }
-
 .footer form input, .footer form textarea {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text);
 }
 
 /* Media query para desktop */
