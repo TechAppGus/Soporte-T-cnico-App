@@ -1,0 +1,125 @@
+/* Estilos generales: Reset y variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Mobile-first: Estilos base para móviles */
+.header {
+    background: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: none; /* Oculto por defecto en mobile */
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-menu ul li {
+    margin: 10px 0;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hero {
+    background: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.services, .how-it-works, .prices, .testimonials, .footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+.services-grid, .prices-grid, .testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.service-card, .price-card, .testimonial-card {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.footer form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.footer form label {
+    margin-top: 1rem;
+}
+
+.footer form input, .footer form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Media query para desktop */
+@media (min-width: 768px) {
+    .nav-menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    .hamburger {
+        display: none; /* Ocultar botón en desktop */
+    }
+    
+    .services-grid, .prices-grid, .testimonial-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

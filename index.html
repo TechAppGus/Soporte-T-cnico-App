@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico Confiable (Tech App)</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Encabezado con logo, nombre y menú -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Logo de Soporte Técnico Confiable" width="50" height="50">
+                <h1>Soporte Técnico Confiable (Tech App)</h1>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#inicio" aria-label="Ir a Inicio">Inicio</a></li>
+                <li><a href="#servicios" aria-label="Ir a Servicios">Servicios</a></li>
+                    <li><a href="#como-funciona" aria-label="Ir a Cómo funciona">Cómo funciona</a></li>
+                    <li><a href="#precios" aria-label="Ir a Precios">Precios</a></li>
+                    <li><a href="#contacto" aria-label="Ir a Contacto">Contacto</a></li>
+                </ul>
+                <button class="hamburger" aria-label="Abrir menú" id="hamburgerBtn">&#9776;</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Sección Hero -->
+        <section id="inicio" class="hero">
+            <h2>Soporte TI confiable, rápido y cercano</h2>
+            <p>Subtítulo con beneficios clave:</p>
+            <ul>
+                <li>Respuesta en minutos, no horas.</li>
+                <li>Soluciones personalizadas para tu negocio.</li>
+                <li>Expertos certificados en ciberseguridad.</li>
+            </ul>
+            <a href="#contacto" class="cta-button">Solicitar diagnóstico gratuito</a>
+        </section>
+
+        <!-- Sección de Servicios -->
+        <section id="servicios" class="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="assets/icon-remote.png" alt="Icono de soporte remoto" width="50" height="50">
+                    <h3>Soporte remoto 24/7</h3>
+                    <p>Asistencia inmediata para resolver problemas técnicos desde cualquier lugar.</p>
+                </div>
+                <div class="service-card">
+                    <img src="assets/icon-maintenance.png" alt="Icono de mantenimiento preventivo" width="50" height="50">
+                    <h3>Mantenimiento preventivo</h3>
+                    <p>Chequeos regulares para evitar fallos y optimizar el rendimiento.</p>
+                </div>
+                <div class="service-card">
+                    <img src="assets/icon-security.png" alt="Icono de configuración y seguridad" width="50" height="50">
+                    <h3>Configuración y seguridad</h3>
+                    <p>Protección avanzada contra amenazas y configuración de redes seguras.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Cómo funciona -->
+        <section id="como-funciona" class="how-it-works">
+            <h2>Cómo funciona</h2>
+            <ol>
+                <li>Solicitas: Envía tu consulta a través de nuestro formulario.</li>
+                <li>Diagnóstico: Nuestro equipo analiza tu problema rápidamente.</li>
+                <li>Soporte o Plan: Recibe soporte inmediato o un plan personalizado.</li>
+            </ol>
+        </section>
+
+        <!-- Sección de Precios -->
+        <section id="precios" class="prices">
+            <h2>Precios</h2>
+            <div class="prices-grid">
+                <div class="price-card">
+                    <h3>Plan Básico</h3>
+                    <p class="price">$19/mes</p>
+                    <ul>
+                        <li>Soporte remoto básico</li>
+                        <li>Mantenimiento mensual</li>
+                        <li>Seguridad estándar</li>
+                    </ul>
+                </div>
+                <div class="price-card">
+                    <h3>Plan Profesional</h3>
+                    <p class="price">$49/mes</p>
+                    <ul>
+                        <li>Soporte 24/7</li>
+                        <li>Mantenimiento preventivo</li>
+                        <li>Configuración avanzada</li>
+                    </ul>
+                </div>
+                <div class="price-card">
+                    <h3>Plan Premium</h3>
+                    <p class="price">$99/mes</p>
+                    <ul>
+                        <li>Soporte prioritario</li>
+                        <li>Monitoreo continuo</li>
+                        <li>Seguridad premium y consultoría</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Testimonios -->
+        <section id="testimonials" class="testimonials">
+            <h2>Testimonios</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"Excelente servicio, resolvieron mi problema en minutos."</p>
+                    <p>- Cliente 1</p>
+                    <img src="assets/client1.png" alt="Logo de cliente 1" width="100" height="50">
+                </div>
+                <div class="testimonial-card">
+                    <p>"Muy profesionales y atentos. Recomendado 100%."</p>
+                    <p>- Cliente 2</p>
+                    <img src="assets/client2.png" alt="Logo de cliente 2" width="100" height="50">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página con formulario -->
+    <footer id="contacto" class="footer">
+        <h2>Contacto</h2>
+        <form id="contactForm" method="POST" action="https://formspree.io/f/EXAMPLE">
+            <label for="name" aria-required="true">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email" aria-required="true">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Asunto:</label>
+            <input type="text" id="subject" name="subject">
+            
+            <label for="message" aria-required="true">Mensaje:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Enviar</button>
+            <div id="formMessage" aria-live="polite"></div> <!-- Para mensajes de éxito/error -->
+        </form>
+        
+        <div class="contact-info">
+            <p>Email: contacto@techapp.com</p>
+            <p>Teléfono: +1 234 567 890</p>
+            <p>Redes: <a href="#">Facebook</a> | <a href="#">Twitter</a></p>
+            <p>&copy; 2023 Soporte Técnico Confiable. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
