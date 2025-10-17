@@ -145,3 +145,75 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+/* --- Layout y espaciados --- */
+section {
+  padding: 4rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: var(--muted);
+}
+
+.services-grid,
+.prices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card,
+.price-card {
+  background: var(--surface);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+section p {
+  text-align: center;
+  color: var(--muted);
+}
+.service-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+}
+
+@media (max-width: 768px) {
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
