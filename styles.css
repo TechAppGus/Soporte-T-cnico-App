@@ -54,18 +54,20 @@ body {
 
 .nav-menu ul {
     list-style: none;
-    display: none; /* Oculto por defecto en mobile */
-    flex-direction: column;
-    width: 100%;
+    display: flex; /* Oculto por defecto en mobile */
+    align-items:center;
+    gap:1.25rem;
+    margin:0;
+    padding:0;
 }
+.nav-menu li{ margin:0; }
 
-.nav-menu ul li {
-    margin: 10px 0;
-}
-
-.nav-menu ul li a {
-    color: white;
-    text-decoration: none;
+.nav-menu a{
+  display:inline-block;
+  padding: .35rem .25rem; /* un poco de aire alrededor del texto */
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
 }
 
 .hamburger {
